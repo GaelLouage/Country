@@ -1,0 +1,23 @@
+<app-nav></app-nav>
+  <div class="container">
+    <div class="search">
+      <div class="ss">
+      <p><i class="fa fa-search" style="font-size:35px"></i></p>
+      <input type="text" (input)="getCountrys($event)" placeholder="Search for a country...">
+    </div>
+      <select name="cars" id="cars" (change)="getRegion($event)">
+        <option selected="selected" disabled>Filter by Region</option>
+        <option  *ngFor="let item of regions" [value]="item">{{item}}</option> 
+      </select>
+    </div>
+    <div  class="cards">
+      <app-card (click)="getCountryDetails(item)"   *ngFor="let item of countryLijst"
+      [img]="item.flags.png"
+      [country]="item.name.official"
+      [population]="item.population"
+      [region]="item.region"
+      [capital]="item.capital[0]"
+      ></app-card>
+      </div>
+  </div>
+  

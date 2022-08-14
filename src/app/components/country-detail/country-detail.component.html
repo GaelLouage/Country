@@ -1,0 +1,24 @@
+<app-nav></app-nav>
+
+<i (click)="goBack()" class="fa fa-arrow-left" style="font-size:24px"></i>
+<div class="container">
+   <div>
+     <img [src]="country.flags.png">
+   </div>
+   <div class="right-box">
+       <div>
+        <h1>{{country.name.common}}</h1>
+        <p><strong>Native Name:</strong> {{country.altSpellings[country.altSpellings.length-1]}}</p>
+        <p><strong>Population: </strong>{{country.population}}</p>
+        <p><strong>Region:</strong> {{country.region}}</p>
+        <p><strong>Sub-region: </strong>{{country.subregion}}</p>
+        <p><strong>Capital:</strong> {{country.capital}}</p>
+    </div>
+        <div>
+            <p><strong>Top Level Domain:</strong> {{country.tld}}</p>
+            <a [href]="country.maps.googleMaps" target="_blank">
+            google maps</a>
+        </div>
+     
+   </div>
+</div>

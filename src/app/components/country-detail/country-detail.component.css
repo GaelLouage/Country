@@ -1,0 +1,46 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 80%;
+    margin: 25vh auto;
+    background-color: #ececec;
+}
+img {
+    width: 35em;
+}
+i {
+   margin-top: 2em;
+    margin-left: 8em;
+}
+
+.right-box{
+    display: flex;
+    justify-content: space-around;
+}
+.right-box p, a ,h1 {
+    padding: 12px;
+}
+.right-box div:last-of-type {
+    margin-top: 5em;
+}
+
+@media only screen and (max-width: 1500px) {
+  
+    img {
+        width:100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+
+    }
+}
+
+@media only screen and (max-width: 600px) {
+   
+    
+}
